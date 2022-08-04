@@ -235,7 +235,7 @@ if __name__ == '__main__':
             info_prefix=args.extra_tag,
             version=args.version,
             out_dir=args.out_dir)
-    elif args.dataset == 'nuscenes' and args.version != 'v1.0-mini':
+    elif args.dataset == 'nuscenes' and args.version != 'v1.0-test':
         train_version = f'{args.version}-trainval'
         nuscenes_data_prep(
             root_path=args.root_path,
@@ -254,7 +254,7 @@ if __name__ == '__main__':
             dataset_name='NuScenesDataset',
             out_dir=args.out_dir,
             max_sweeps=args.max_sweeps)
-    elif args.dataset == 'nuscenes' and args.version == 'v1.0-mini':
+    elif args.dataset == 'nuscenes' and args.version == 'v1.0-test':
         train_version = f'{args.version}'
         nuscenes_data_prep(
             root_path=args.root_path,
